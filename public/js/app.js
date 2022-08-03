@@ -1965,8 +1965,8 @@ render._withStripped = true;
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
-  * Bootstrap v4.6.2 (https://getbootstrap.com/)
-  * Copyright 2011-2022 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+  * Bootstrap v4.6.1 (https://getbootstrap.com/)
+  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
@@ -1992,14 +1992,11 @@ render._withStripped = true;
   function _createClass(Constructor, protoProps, staticProps) {
     if (protoProps) _defineProperties(Constructor.prototype, protoProps);
     if (staticProps) _defineProperties(Constructor, staticProps);
-    Object.defineProperty(Constructor, "prototype", {
-      writable: false
-    });
     return Constructor;
   }
 
   function _extends() {
-    _extends = Object.assign ? Object.assign.bind() : function (target) {
+    _extends = Object.assign || function (target) {
       for (var i = 1; i < arguments.length; i++) {
         var source = arguments[i];
 
@@ -2012,6 +2009,7 @@ render._withStripped = true;
 
       return target;
     };
+
     return _extends.apply(this, arguments);
   }
 
@@ -2023,16 +2021,17 @@ render._withStripped = true;
   }
 
   function _setPrototypeOf(o, p) {
-    _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) {
+    _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
       o.__proto__ = p;
       return o;
     };
+
     return _setPrototypeOf(o, p);
   }
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.6.2): util.js
+   * Bootstrap (v4.6.1): util.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -2206,7 +2205,7 @@ render._withStripped = true;
    */
 
   var NAME$a = 'alert';
-  var VERSION$a = '4.6.2';
+  var VERSION$a = '4.6.1';
   var DATA_KEY$a = 'bs.alert';
   var EVENT_KEY$a = "." + DATA_KEY$a;
   var DATA_API_KEY$7 = '.data-api';
@@ -2354,7 +2353,7 @@ render._withStripped = true;
    */
 
   var NAME$9 = 'button';
-  var VERSION$9 = '4.6.2';
+  var VERSION$9 = '4.6.1';
   var DATA_KEY$9 = 'bs.button';
   var EVENT_KEY$9 = "." + DATA_KEY$9;
   var DATA_API_KEY$6 = '.data-api';
@@ -2545,7 +2544,7 @@ render._withStripped = true;
    */
 
   var NAME$8 = 'carousel';
-  var VERSION$8 = '4.6.2';
+  var VERSION$8 = '4.6.1';
   var DATA_KEY$8 = 'bs.carousel';
   var EVENT_KEY$8 = "." + DATA_KEY$8;
   var DATA_API_KEY$5 = '.data-api';
@@ -3132,7 +3131,7 @@ render._withStripped = true;
    */
 
   var NAME$7 = 'collapse';
-  var VERSION$7 = '4.6.2';
+  var VERSION$7 = '4.6.1';
   var DATA_KEY$7 = 'bs.collapse';
   var EVENT_KEY$7 = "." + DATA_KEY$7;
   var DATA_API_KEY$4 = '.data-api';
@@ -3473,7 +3472,7 @@ render._withStripped = true;
    */
 
   var NAME$6 = 'dropdown';
-  var VERSION$6 = '4.6.2';
+  var VERSION$6 = '4.6.1';
   var DATA_KEY$6 = 'bs.dropdown';
   var EVENT_KEY$6 = "." + DATA_KEY$6;
   var DATA_API_KEY$3 = '.data-api';
@@ -3976,7 +3975,7 @@ render._withStripped = true;
    */
 
   var NAME$5 = 'modal';
-  var VERSION$5 = '4.6.2';
+  var VERSION$5 = '4.6.1';
   var DATA_KEY$5 = 'bs.modal';
   var EVENT_KEY$5 = "." + DATA_KEY$5;
   var DATA_API_KEY$2 = '.data-api';
@@ -4580,7 +4579,7 @@ render._withStripped = true;
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.6.2): tools/sanitizer.js
+   * Bootstrap (v4.6.1): tools/sanitizer.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4705,7 +4704,7 @@ render._withStripped = true;
    */
 
   var NAME$4 = 'tooltip';
-  var VERSION$4 = '4.6.2';
+  var VERSION$4 = '4.6.1';
   var DATA_KEY$4 = 'bs.tooltip';
   var EVENT_KEY$4 = "." + DATA_KEY$4;
   var JQUERY_NO_CONFLICT$4 = $__default["default"].fn[NAME$4];
@@ -5415,7 +5414,7 @@ render._withStripped = true;
    */
 
   var NAME$3 = 'popover';
-  var VERSION$3 = '4.6.2';
+  var VERSION$3 = '4.6.1';
   var DATA_KEY$3 = 'bs.popover';
   var EVENT_KEY$3 = "." + DATA_KEY$3;
   var JQUERY_NO_CONFLICT$3 = $__default["default"].fn[NAME$3];
@@ -5589,7 +5588,7 @@ render._withStripped = true;
    */
 
   var NAME$2 = 'scrollspy';
-  var VERSION$2 = '4.6.2';
+  var VERSION$2 = '4.6.1';
   var DATA_KEY$2 = 'bs.scrollspy';
   var EVENT_KEY$2 = "." + DATA_KEY$2;
   var DATA_API_KEY$1 = '.data-api';
@@ -5675,7 +5674,9 @@ render._withStripped = true;
         }
 
         return null;
-      }).filter(Boolean).sort(function (a, b) {
+      }).filter(function (item) {
+        return item;
+      }).sort(function (a, b) {
         return a[0] - b[0];
       }).forEach(function (item) {
         _this2._offsets.push(item[0]);
@@ -5871,7 +5872,7 @@ render._withStripped = true;
    */
 
   var NAME$1 = 'tab';
-  var VERSION$1 = '4.6.2';
+  var VERSION$1 = '4.6.1';
   var DATA_KEY$1 = 'bs.tab';
   var EVENT_KEY$1 = "." + DATA_KEY$1;
   var DATA_API_KEY = '.data-api';
@@ -5909,7 +5910,7 @@ render._withStripped = true;
     _proto.show = function show() {
       var _this = this;
 
-      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && $__default["default"](this._element).hasClass(CLASS_NAME_ACTIVE) || $__default["default"](this._element).hasClass(CLASS_NAME_DISABLED) || this._element.hasAttribute('disabled')) {
+      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && $__default["default"](this._element).hasClass(CLASS_NAME_ACTIVE) || $__default["default"](this._element).hasClass(CLASS_NAME_DISABLED)) {
         return;
       }
 
@@ -6095,7 +6096,7 @@ render._withStripped = true;
    */
 
   var NAME = 'toast';
-  var VERSION = '4.6.2';
+  var VERSION = '4.6.1';
   var DATA_KEY = 'bs.toast';
   var EVENT_KEY = "." + DATA_KEY;
   var JQUERY_NO_CONFLICT = $__default["default"].fn[NAME];
@@ -37646,7 +37647,7 @@ function normalizeComponent(
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global, setImmediate) {/*!
- * Vue.js v2.7.8
+ * Vue.js v2.7.7
  * (c) 2014-2022 Evan You
  * Released under the MIT License.
  */
@@ -38608,7 +38609,7 @@ function defineReactive(obj, key, val, customSetter, shallow, mock) {
                 // #7981: for accessor properties without setter
                 return;
             }
-            else if (!shallow && isRef(value) && !isRef(newVal)) {
+            else if (isRef(value) && !isRef(newVal)) {
                 value.value = newVal;
                 return;
             }
@@ -39881,19 +39882,7 @@ function createSetupContext(vm) {
     let exposeCalled = false;
     return {
         get attrs() {
-            if (!vm._attrsProxy) {
-                const proxy = (vm._attrsProxy = {});
-                def(proxy, '_v_attr_proxy', true);
-                syncSetupProxy(proxy, vm.$attrs, emptyObject, vm, '$attrs');
-            }
-            return vm._attrsProxy;
-        },
-        get listeners() {
-            if (!vm._listenersProxy) {
-                const proxy = (vm._listenersProxy = {});
-                syncSetupProxy(proxy, vm.$listeners, emptyObject, vm, '$listeners');
-            }
-            return vm._listenersProxy;
+            return initAttrsProxy(vm);
         },
         get slots() {
             return initSlotsProxy(vm);
@@ -39912,12 +39901,20 @@ function createSetupContext(vm) {
         }
     };
 }
-function syncSetupProxy(to, from, prev, instance, type) {
+function initAttrsProxy(vm) {
+    if (!vm._attrsProxy) {
+        const proxy = (vm._attrsProxy = {});
+        def(proxy, '_v_attr_proxy', true);
+        syncSetupAttrs(proxy, vm.$attrs, emptyObject, vm);
+    }
+    return vm._attrsProxy;
+}
+function syncSetupAttrs(to, from, prev, instance) {
     let changed = false;
     for (const key in from) {
         if (!(key in to)) {
             changed = true;
-            defineProxyAttr(to, key, instance, type);
+            defineProxyAttr(to, key, instance);
         }
         else if (from[key] !== prev[key]) {
             changed = true;
@@ -39931,12 +39928,12 @@ function syncSetupProxy(to, from, prev, instance, type) {
     }
     return changed;
 }
-function defineProxyAttr(proxy, key, instance, type) {
+function defineProxyAttr(proxy, key, instance) {
     Object.defineProperty(proxy, key, {
         enumerable: true,
         configurable: true,
         get() {
-            return instance[type][key];
+            return instance.$attrs[key];
         }
     });
 }
@@ -39957,26 +39954,16 @@ function syncSetupSlots(to, from) {
     }
 }
 /**
- * @internal use manual type def because public setup context type relies on
- * legacy VNode types
+ * @internal use manual type def
  */
 function useSlots() {
     return getContext().slots;
 }
 /**
- * @internal use manual type def because public setup context type relies on
- * legacy VNode types
+ * @internal use manual type def
  */
 function useAttrs() {
     return getContext().attrs;
-}
-/**
- * Vue 2 only
- * @internal use manual type def because public setup context type relies on
- * legacy VNode types
- */
-function useListeners() {
-    return getContext().listeners;
 }
 function getContext() {
     if (!currentInstance) {
@@ -40578,19 +40565,12 @@ function updateChildComponent(vm, propsData, listeners, parentVnode, renderChild
     if (vm._attrsProxy) {
         // force update if attrs are accessed and has changed since it may be
         // passed to a child component.
-        if (syncSetupProxy(vm._attrsProxy, attrs, (prevVNode.data && prevVNode.data.attrs) || emptyObject, vm, '$attrs')) {
+        if (syncSetupAttrs(vm._attrsProxy, attrs, (prevVNode.data && prevVNode.data.attrs) || emptyObject, vm)) {
             needsForceUpdate = true;
         }
     }
     vm.$attrs = attrs;
-    // update listeners
-    listeners = listeners || emptyObject;
-    const prevListeners = vm.$options._parentListeners;
-    if (vm._listenersProxy) {
-        syncSetupProxy(vm._listenersProxy, listeners, prevListeners || emptyObject, vm, '$listeners');
-    }
-    vm.$listeners = vm.$options._parentListeners = listeners;
-    updateComponentListeners(vm, listeners, prevListeners);
+    vm.$listeners = listeners || emptyObject;
     // update props
     if (propsData && vm.$options.props) {
         toggleObserving(false);
@@ -40605,6 +40585,11 @@ function updateChildComponent(vm, propsData, listeners, parentVnode, renderChild
         // keep a copy of raw propsData
         vm.$options.propsData = propsData;
     }
+    // update listeners
+    listeners = listeners || emptyObject;
+    const oldListeners = vm.$options._parentListeners;
+    vm.$options._parentListeners = listeners;
+    updateComponentListeners(vm, listeners, oldListeners);
     // resolve slots + force update if has children
     if (needsForceUpdate) {
         vm.$slots = resolveSlots(renderChildren, parentVnode.context);
@@ -41544,7 +41529,7 @@ const onRenderTriggered = createLifeCycle('renderTriggered');
 /**
  * Note: also update dist/vue.runtime.mjs when adding new exports to this file.
  */
-const version = '2.7.8';
+const version = '2.7.7';
 /**
  * @internal type is manually declared in <root>/types/v3-define-component.d.ts
  */
@@ -41590,7 +41575,6 @@ var vca = /*#__PURE__*/Object.freeze({
   getCurrentInstance: getCurrentInstance,
   useSlots: useSlots,
   useAttrs: useAttrs,
-  useListeners: useListeners,
   mergeDefaults: mergeDefaults,
   nextTick: nextTick,
   set: set,
@@ -48500,7 +48484,10 @@ function genElement(el, state) {
             // check if this is a component in <script setup>
             const bindings = state.options.bindings;
             if (maybeComponent && bindings && bindings.__isScriptSetup !== false) {
-                tag = checkBindingType(bindings, el.tag);
+                tag =
+                    checkBindingType(bindings, el.tag) ||
+                        checkBindingType(bindings, camelize(el.tag)) ||
+                        checkBindingType(bindings, capitalize(camelize(el.tag)));
             }
             if (!tag)
                 tag = `'${el.tag}'`;
@@ -48517,29 +48504,9 @@ function genElement(el, state) {
     }
 }
 function checkBindingType(bindings, key) {
-    const camelName = camelize(key);
-    const PascalName = capitalize(camelName);
-    const checkType = (type) => {
-        if (bindings[key] === type) {
-            return key;
-        }
-        if (bindings[camelName] === type) {
-            return camelName;
-        }
-        if (bindings[PascalName] === type) {
-            return PascalName;
-        }
-    };
-    const fromConst = checkType("setup-const" /* BindingTypes.SETUP_CONST */) ||
-        checkType("setup-reactive-const" /* BindingTypes.SETUP_REACTIVE_CONST */);
-    if (fromConst) {
-        return fromConst;
-    }
-    const fromMaybeRef = checkType("setup-let" /* BindingTypes.SETUP_LET */) ||
-        checkType("setup-ref" /* BindingTypes.SETUP_REF */) ||
-        checkType("setup-maybe-ref" /* BindingTypes.SETUP_MAYBE_REF */);
-    if (fromMaybeRef) {
-        return fromMaybeRef;
+    const type = bindings[key];
+    if (type && type.startsWith('setup')) {
+        return key;
     }
 }
 // hoist static sub-trees out
@@ -49624,10 +49591,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/sass/front.scss":
-/*!***********************************!*\
-  !*** ./resources/sass/front.scss ***!
-  \***********************************/
+/***/ "./resources/sass/guest/front.scss":
+/*!*****************************************!*\
+  !*** ./resources/sass/guest/front.scss ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -49636,15 +49603,15 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!*****************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/front.scss ***!
-  \*****************************************************************************************/
+/*!***********************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/guest/front.scss ***!
+  \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\giaki\Desktop\Boolean\Corso\Esercizi\BackEnd\20-07-2022\laravel-one-to-many\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\Users\giaki\Desktop\Boolean\Corso\Esercizi\BackEnd\20-07-2022\laravel-one-to-many\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\Users\giaki\Desktop\Boolean\Corso\Esercizi\BackEnd\20-07-2022\laravel-one-to-many\resources\sass\front.scss */"./resources/sass/front.scss");
+__webpack_require__(/*! C:\Users\giaki\Desktop\laravel-blog\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\Users\giaki\Desktop\laravel-blog\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! C:\Users\giaki\Desktop\laravel-blog\resources\sass\guest\front.scss */"./resources/sass/guest/front.scss");
 
 
 /***/ })
